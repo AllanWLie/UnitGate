@@ -1,0 +1,27 @@
+﻿<Application x:Class="UnitGate.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="View/MainView.xaml">
+    <Application.Resources>
+        <Style TargetType="TextBox" x:Key="bodyTextBox">
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+        <Style TargetType="TextBlock" x:Key="bodyText">
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+        <Style TargetType="TextBlock" x:Key="bodyTextBold" BasedOn="{StaticResource bodyText}">
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+        <Style TargetType="TextBlock" x:Key="headerText">
+            <Setter Property="FontSize" Value="27" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+        <Style TargetType="TextBlock" x:Key="headerUnderlinedText" BasedOn="{StaticResource headerText}">
+            <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+        </Style>
+        <Style TargetType="TextBlock" x:Key="horStackpanelBodyText" BasedOn="{StaticResource bodyText}">
+            <Setter Property="Margin" Value="0,0,10,0" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+    </Application.Resources>
+</Application>

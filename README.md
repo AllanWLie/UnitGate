@@ -1,2 +1,2 @@
 # UnitGate
-An application for viewing Inverters from Enecsys
+An application for viewing data from Enecsys inverters
