@@ -37,16 +37,12 @@ namespace Shared.Services
             //Inverter data
             string orgData = zigbeeData;
             //Remove WS= from string
-           // zigbeeData = zigbeeData.Remove(0, 3);
+            zigbeeData = zigbeeData.Remove(0, 3);
             //Convert base64 to decimal
-            //var zigbeeDec = FromBase64ToDec(letter + zigbeeData);
+            var zigbeeDec = FromBase64ToDec(letter + zigbeeData);
              
-            
-            byte[] data = Convert.FromBase64String('A'+zigbeeData.Substring(3,54));
-            string zigbeeHex = BitConverter.ToString(data);
-
             //Convert decimal to hex
-            //var zigbeeHex = zigbeeDec.ToString("x4");
+            var zigbeeHex = zigbeeDec.ToString("x4");
            
             if (zigbeeHex.Length == 82)
             {
