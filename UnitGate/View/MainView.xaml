@@ -12,7 +12,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:VM="clr-namespace:UnitGate.ViewModel"
         xmlns:Controls="clr-namespace:UnitGate.View.UserControls"
-        Title="{Binding Title}" Height="300" Width="1200" SizeToContent="Height"  Icon="/Images/icon.ico">
+        Title="{Binding Title}" Height="800" Width="1200" Icon="/Images/icon.ico">
     <Window.DataContext>
         <VM:MainViewModel />
     </Window.DataContext>
@@ -42,19 +42,18 @@
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="auto" />
 
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
+            <Grid Grid.Row="0" Margin ="10,0,10,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Image Grid.Column="0" Source="/Images/LogoBW.png" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+                <Image Grid.Column="0" Source="/Images/Lie-Consulting-Logo-V-2.png" HorizontalAlignment="Left" Margin="10,0,0,0"/>
 
                 <StackPanel Grid.Column="1" HorizontalAlignment="Center">
                     <TextBlock Text="UnitGate" Style="{StaticResource headerText}" HorizontalAlignment="Center" />
@@ -80,7 +79,9 @@
             <DataGrid Grid.Row="1" x:Name="ZigbitGrid"
                       FontSize="16"
                       Margin="10,0,10,0"
+                      BorderThickness="1"
                       VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Hidden"
                       RowHeaderWidth="0"
                       AutoGenerateColumns="False"
                       IsReadOnly="True"
@@ -89,9 +90,10 @@
                       CanUserAddRows="False"
                       CanUserSortColumns="True"
                       GridLinesVisibility="None"
+                      Background="White"
                       ItemsSource="{Binding Zigbits}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Serial Number" Binding="{Binding Serial}" Width="*" />
+                    <DataGridTextColumn Header="Serial Number" Binding="{Binding Serial}" Width="*"/>
                     <DataGridTextColumn Header="Alias" Binding="{Binding Alias}" Width="0.7*" />
                     <DataGridTextColumn Header="AC Watt" Binding="{Binding ACWatt}" Width="0.7*" />
                     <DataGridTextColumn Header="DC Watt" Binding="{Binding DCWatt}" Width="0.7*" />
@@ -110,7 +112,6 @@
             <Grid Grid.Row="2" Margin="10,10,0,10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
-                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>

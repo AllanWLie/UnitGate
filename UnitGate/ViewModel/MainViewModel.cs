@@ -54,7 +54,7 @@ namespace UnitGate.ViewModel
         public MainViewModel()
         {
             var obj = Assembly.GetExecutingAssembly().GetName().Version;
-            Title = String.Format("UnitGate - Version {0}.{1}", obj.Major, obj.Minor);
+            Title = $"UnitGate - Version {obj.Major}.{obj.Minor}.{obj.Build}";
 
             Task.Run(() => InitiliseServices());
             ConnectionStatus = "Disconnected";
@@ -62,7 +62,7 @@ namespace UnitGate.ViewModel
 
             Zigbits = new ObservableCollection<Zigbit>();
             BindingOperations.EnableCollectionSynchronization(Zigbits, _itemsLock);
-
+            //LoadDemoData();
 
             _dataConfigCommand = new DelegateCommand<string>(DataConfigCommandExecute);
             _exitCommand = new DelegateCommand<string>(ExitCommandExecute);
@@ -297,32 +297,6 @@ namespace UnitGate.ViewModel
             if (window != null) window.Close();
         }
 
-        //private async void OnRefreshDataConfigUpdated()
-        //{
-        //    await Task.Run(() => {
-
-        //        foreach (Zigbit zigbit in Zigbits)
-        //        {
-        //            string[] filter = _configService.GetConfig(zigbit.Serial, ConfigTypes.Data).Split(';');
-        //            string alias = filter[0];
-
-        //            if (filter.Length > 1)
-        //            {
-        //                bool exclude = bool.Parse(filter[1] ?? "false");
-        //                if (exclude)
-        //                {
-        //                    Zigbits.Remove(zigbit);
-        //                }
-        //            }
-        //            if(!string.IsNullOrEmpty(zigbit.Alias))
-        //            {
-        //                zigbit.Alias = alias;
-        //            }
-        //        }
-
-        //    });
-        //}
-
         private async void OnZigbitUpdated(Zigbit newItem)
         {
             await Task.Run(() =>
@@ -374,7 +348,7 @@ namespace UnitGate.ViewModel
                                     Zigbits.Add(newItem);
                             }
 
-                            InverterCount = Zigbits.Count;
+                            
                             CalculateTotaProduction();
                         }
                     }
@@ -389,11 +363,14 @@ namespace UnitGate.ViewModel
             });
         }
 
-        private void LoadDemoData()
+        private void LoadDemoData(int times = 1)
         {
-            foreach (Zigbit zigbit in ZigbitDemoData.LoadDemoData())
+            for (int i = 0; i < times; i++)
             {
-                Zigbits.Add(zigbit);
+                foreach (Zigbit zigbit in ZigbitDemoData.LoadDemoData())
+                {
+                    Zigbits.Add(zigbit);
+                }
             }
             CalculateTotaProduction();
         }
@@ -414,6 +391,7 @@ namespace UnitGate.ViewModel
             TotalDCWatt = totalDC;
             TotalACWatt = totalAc;
             TotalLifeKwh = totalLife;
+            InverterCount = Zigbits.Count;
         }
 
         private void RaisePropertyChanged(string propertyName)

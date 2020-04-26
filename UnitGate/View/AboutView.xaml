@@ -36,7 +36,7 @@
 
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Age: " Style="{StaticResource bodyTextBold}" />
-                <TextBlock Text="29" Style="{StaticResource bodyText}" />
+                <TextBlock Text="34" Style="{StaticResource bodyText}" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
@@ -45,8 +45,18 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Mail: " Style="{StaticResource bodyTextBold}" />
+                <TextBlock Text="allan@allanlie.dk" Style="{StaticResource bodyText}" MouseDown="MailMouseDown" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Occupation: " Style="{StaticResource bodyTextBold}" />
-                <TextBlock Text="Software developer" Style="{StaticResource bodyText}" />
+                <TextBlock Text="Software Consultant" Style="{StaticResource bodyText}" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Company: " Style="{StaticResource bodyTextBold}" />
+                <TextBlock Text="Lie Consulting ApS" Style="{StaticResource bodyText}" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
@@ -55,38 +65,15 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Primary: " Style="{StaticResource bodyTextBold}" />
-                <TextBlock Text="C#, WPF/WCF, MSSQL, Android" Style="{StaticResource bodyText}" />
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Secoundary: " Style="{StaticResource bodyTextBold}" />
-                <TextBlock Text="MySQL, HTML5, CSS3, JavaScript" Style="{StaticResource bodyText}" />
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Mail: " Style="{StaticResource bodyTextBold}" />
-                <TextBlock Text="allan@liedev.dk" Style="{StaticResource bodyText}" MouseDown="MailMouseDown" />
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Phone: " Style="{StaticResource bodyTextBold}" />
-                <TextBlock Text="+45 3175 6085" Style="{StaticResource bodyText}" />
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
                 <TextBlock Text="LinkedIn: " Style="{StaticResource bodyTextBold}" />
                 <TextBlock Text="Click here" Style="{StaticResource bodyText}" MouseDown="LinkedInMouseDown" />
             </StackPanel>
-
+            
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Web: " Style="{StaticResource bodyTextBold}" />
-                <TextBlock Text="http://www.liedev.dk" Style="{StaticResource bodyText}" MouseDown="WebMouseDown" />
+                <TextBlock Text="http://www.allanlie.dk" Style="{StaticResource bodyText}" MouseDown="WebMouseDown" />
             </StackPanel>
         </StackPanel>
-
-        <Image Source="/Images/AllanLie.png" HorizontalAlignment="Right" Margin="0,10,0,40" Grid.RowSpan="2" />
-
 
         <Button Grid.Row="3" Content="Close" Command="{Binding CloseCommand}" />
 

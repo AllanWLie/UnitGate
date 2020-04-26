@@ -24,9 +24,9 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Text="Static IP" FontSize="20" Margin="10,0,0,0" />
-        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center">
-            <TextBlock Text="IP: " Style="{StaticResource bodyText}"/>
-            <TextBox Text="{Binding StaticIP, Mode=TwoWay}" Width="290" Style="{StaticResource bodyTextBox}" ToolTip="Eksample: 192.168.0.1"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center" Margin="10,0,10,0">
+            <TextBlock Text="IP: " Style="{StaticResource bodyText}" Margin="0,0,10,0"/>
+            <TextBox Text="{Binding StaticIP, Mode=TwoWay}" Width="240" Style="{StaticResource bodyTextBox}" ToolTip="Eksample: 192.168.0.1"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom"
                     Margin="0,10,5,10">

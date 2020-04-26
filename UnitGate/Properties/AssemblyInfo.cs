@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("UnitGate")]
 [assembly: AssemblyDescription("By Allan Wamming Lie")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Lie Development")]
+[assembly: AssemblyCompany("Lie Consulting ApS")]
 [assembly: AssemblyProduct("UnitGate")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -53,6 +53,6 @@ using System.Windows;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("1.3.0.0")]
-[assembly: AssemblyFileVersion("1.3.0.0")]
+[assembly: AssemblyVersion("1.3.1.0")]
+[assembly: AssemblyFileVersion("1.3.1.0")]
 [assembly: NeutralResourcesLanguage("en-GB")]

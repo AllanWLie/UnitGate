@@ -214,20 +214,22 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\AllanLie.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\donate.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\AllanLie.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.csproj">
       <Project>{557f48dd-968e-46fe-9328-28b980307c33}</Project>
       <Name>Shared</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Lie-Consulting-Logo-V-2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

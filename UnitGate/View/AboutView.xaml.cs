@@ -24,14 +24,14 @@ namespace UnitGate.View
 
         private void WebMouseDown(object sender, MouseButtonEventArgs e)
         {
-            var url = "http://www.liedev.dk";
+            var url = "http://www.allanlie.dk";
 
             Process.Start(url);
         }
 
         private void MailMouseDown(object sender, MouseButtonEventArgs e)
         {
-            var url = "mailto://allan@liedev.dk";
+            var url = "mailto://allan@allanlie.dk";
 
             Process.Start(url);
         }
