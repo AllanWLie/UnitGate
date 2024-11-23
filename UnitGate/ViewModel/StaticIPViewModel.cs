@@ -1,8 +1,8 @@
 ﻿/*
   Application Name:     Unitgate  
   Created by:           Allan Wamming Lie
-  Created:              2014-2016
-  Company:              Lie Development
+  Created:              2014-2025
+  Company:              Lie Consulting
   E-mail:               unitgate@allanlie.dk 
   Web:                  unitgate.eu
  */
@@ -10,7 +10,7 @@
 
 using System.Text.RegularExpressions;
 using System.Windows;
-using Shared.Helpers;
+using UnitGate.Helpers;
 using UnitGate.Enums;
 using UnitGate.Service;
 

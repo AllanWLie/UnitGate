@@ -1,5 +1,4 @@
-﻿using CSharpAnalytics;
-
+﻿
 namespace UnitGate.View
 {
     /// <summary>
@@ -10,8 +9,6 @@ namespace UnitGate.View
         public StaticIPView()
         {
             InitializeComponent();
-
-            AutoMeasurement.Client.TrackScreenView("StaticIPView");
         }
     }
 }
