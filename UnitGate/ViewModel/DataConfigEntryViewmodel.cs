@@ -1,8 +1,8 @@
 ﻿/*
   Application Name:     Unitgate  
   Created by:           Allan Wamming Lie
-  Created:              2014-2016
-  Company:              Lie Development
+  Created:              2014-2025
+  Company:              Lie Consulting
   E-mail:               unitgate@allanlie.dk 
   Web:                  unitgate.eu
  */
